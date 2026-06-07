@@ -7,7 +7,7 @@ and the recipe from:
 https://github.com/CTPPS/cmssw/tree/ab-dev-dirsim/Validation/CTPPS/test/simu#readme
 
 ========================================================================================
-Setup a working area to run the systematics configs
+Setup a working area to run the systematics configs. 
 ========================================================================================
 git clone git@github.com:jjhollar/TestProtonSystematics.git
 
@@ -23,7 +23,11 @@ mkdir proton_reco_resolution
 In systematics_2023_cfg.py, or systematics_2018_cfg.py:
 ========================================================================================
 
-   Uncomment *one* value at a time for either ASYST (alignment systematics), or OSYST (optics systematics), or RSYST (resolution)
+   Uncomment *one* value at a time for either ASYST (alignment systematics), or OSYST (optics systematics),
+   or RSYST (resolution)
 
    Edit the path to the misalignment_*_*.xml files (these are the same files that were in the
-   proton_simulation_validation/templates/proton_reco_misalignment directory in the Run 2 recipe)
+   proton_simulation_validation/templates/proton_reco_misalignment directory in the old recipe)
+
+cmsRun systematics_2023_cfg.py
+(or cmsRun systematics_2018_cfg.py)

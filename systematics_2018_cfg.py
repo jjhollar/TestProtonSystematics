@@ -19,7 +19,7 @@ RSYST = ""
 # Optics
 #OSYST = "none"
 #OSYST = "Lx"
-#OSYST = "Lpx"
+OSYST = "Lpx"
 #OSYST = "Lpy"
 #OSYST = "xd"
 
