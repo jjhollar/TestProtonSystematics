@@ -4,6 +4,7 @@ Setup and compile the development version of direct simulation for 2023
 
 Currently (June 2026) this requires CMSSW_16_1_0_pre4
 and the recipe from:
+
 https://github.com/CTPPS/cmssw/tree/ab-dev-dirsim/Validation/CTPPS/test/simu#readme
 
 ========================================================================================
@@ -31,3 +32,20 @@ In systematics_2023_cfg.py, or systematics_2018_cfg.py:
 
 cmsRun systematics_2023_cfg.py
 (or cmsRun systematics_2018_cfg.py)
+
+========================================================================================
+Collect results and draw plots
+========================================================================================
+
+    After running the config for all alignment and optics systematics variations for
+    one year:
+
+make
+./collect_systematics 2023
+
+    This will produce a file "all_collect_systematics.root", where the TGraph for the total
+    systematic uncertainty is named "combined".
+
+    An example of plotting the result is in the Plot.C macro (axis ranges and
+    cosmetics should be adjusted to have a direct comparison)
+    
